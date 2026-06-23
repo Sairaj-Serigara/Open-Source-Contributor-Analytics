@@ -9,15 +9,10 @@ REPOSITORIES = [
 ]
 
 all_contributors = []
-
 for owner, repo in REPOSITORIES:
-
     print(f"\nFetching contributors from {owner}/{repo}...")
-
     contributors = get_contributors(owner, repo, limit=50)
-
     print(f"Collected {len(contributors)} contributors")
-
     all_contributors.extend(contributors)
 
 # Create DataFrame
